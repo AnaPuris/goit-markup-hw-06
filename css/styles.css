@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -211,13 +211,7 @@ img {
     background-color: #F4F4FD;
     padding-top: 96px;
     padding-bottom: 96px;
-    /* padding-top: 120px;
-    padding-bottom: 120px; */
 }   
-
-.team-container {
-
-}
 
 
 .team-title {
@@ -233,7 +227,6 @@ img {
 
 .workers-list {
     display: flex;
-    /* gap: 24px; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -251,7 +244,6 @@ img {
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    /* width: calc((100% - 24px * 3) / 4); */
     width: 100%;
 }
 
@@ -307,8 +299,8 @@ img {
 /**-----------PORTFOLIO--------------------------*/
 
 .portfolio-part {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio-title {
@@ -324,15 +316,19 @@ img {
 
 .portfolio-list {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* row-gap: 48px; */
+    /* column-gap: 24px; */
     background: #FFF;
+    gap: 48px;
 }
 
 .portfolio-item {
     background: #FFF;
-    width: calc((100% - 24px * 2) / 3);
+    /* width: calc((100% - 24px * 2) / 3); */
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     gap: 8px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -399,25 +395,24 @@ img {
 
 .footer {
     background-color: #2E2F42;
-    padding: 100px 0;
+    padding-top: 97.5px;
+    padding-bottom: 96px;
+
 }
 
 .footer-container{
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 .footer-cont-logo{
-    margin-right: 120px;
+    align-items: center;
 }
 
-
-.container-social{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-right: auto;
-}
 
 .footer-logo{
     color: #4D5AE5;
@@ -427,7 +422,8 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-left: 86px;
+    margin-bottom: 17.5px;
     display: inline-block;
 }
 
@@ -444,6 +440,16 @@ img {
     max-width: 264px;
 }
 
+.container-social {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: auto;
+    width: 100%;
+    align-items: center;
+
+}
+
 .social-media-text{
     color: #FFF;
     font-size: 16px;
@@ -453,6 +459,7 @@ img {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
+    margin-top: 72px;
 }
 
 .social-medias{
@@ -491,16 +498,20 @@ img {
 .footer-subscribe{
     display: flex;
     flex-direction: column;
-    padding-left: 80px;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-form{
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
 .footer-input{
-    width: 264px;
+    width: 288px;
     height: 40px;
     border-radius: 4px;
     border: 1px solid #FFF;
@@ -549,8 +560,6 @@ img {
     color: #FFF;
     margin-left: 16px;
 }
-
-
 
 
 
@@ -938,6 +947,90 @@ align-items: center;*/
 
 /**-----------OUR TEAM---------------*/
 
+    .workers-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .workers-list-item{
+        flex-basis: calc((100% - 24px) / 2);
+        margin-bottom: 40px; /*because the space between the cards in our layout is 64 px, so 64-24=40 */
+    }
+
+    .team-container{
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+
+/**-----------PORTFOLIO-------------*/
+
+    .portfolio-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        row-gap: 72px;
+    }
+
+    .portfolio-item{
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+/**-----------FOOTER--------------*/
+
+    .footer-container{
+        max-width: 768px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        column-gap: 24px;
+    }
+
+    .footer-cont-logo{
+        margin-left: 92px;
+        margin-bottom: 72px;
+    }
+
+    .footer-logo {
+        margin-left: 0;
+
+    }
+
+    .footer-text{
+        width: 264px;
+        
+    }
+
+    .container-social{
+        width: 208px;
+        
+    }
+
+    .social-media-text{
+        margin-top: 0;
+        align-self: flex-start;
+    }
+
+    .footer-subscribe{
+        margin-left: 92px;
+
+    }
+
+    .footer-form{
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .footer-input{
+        width: 264px;
+    }
 
 }
 
@@ -1018,4 +1111,94 @@ align-items: center;*/
         display: flex;
     }
 
+/**-----------OUR TEAM---------------*/
+
+    .team-part{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .workers-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .workers-list-item{
+        width: calc((100% - 24px * 3) / 4);
+        margin-bottom: 0;
+    }
+
+/**-----------PORTFOLIO-------------*/
+
+    .portfolio-part{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .portfolio-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 48px;
+        column-gap: 24px;
+    }
+
+    .portfolio-item{
+        flex-basis: calc((100% - 24px * 2) / 3);
+    }
+
+/**-----------FOOTER--------------*/
+
+    .footer{
+        padding: 100px 0;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        column-gap: 0;
+    }
+
+    .footer-cont-logo{
+        margin-right: 120px;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .container-social{
+        width: 208px;
+        align-items: flex-start;
+        
+
+    }
+
+    .social-media-text{
+        margin-top: 0;
+    }
+
+    .footer-subscribe{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 80px;
+        margin-left: 0;
+    }
+
+    .footer-form{
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .footer-input{
+        width: 264px;
+    }
+
+
 }    
+
