@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p {
 .container {
     max-width: 320px;
     padding: 0 16px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
 }
 
 img {
@@ -143,8 +143,10 @@ img {
 }
 
 
-.mob-menu-item {
+.mob-menu-item > .current {
+    color: #404BBF;
 }
+
 
 .mob-menu-item:not(:last-child){
     margin-bottom: 40px;
@@ -167,9 +169,6 @@ img {
 .mob-contact {
     margin-bottom: 48px;
     font-style: normal;
-}
-
-.mob-contact-list {
 }
 
 .mob-contact-item:not(:last-child){
@@ -312,6 +311,10 @@ img {
     letter-spacing: 0.02em;
 }
 
+.pros-item:not(:last-child) {
+    margin-bottom: 72px;
+}
+
 .pros-title {
     color:#2E2F42;
     font-size: 36px;
@@ -327,7 +330,6 @@ img {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding-bottom: 72px;
 }
 
 .container-pros{
@@ -378,7 +380,7 @@ img {
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    width: 100%;
+    width: 264px;
 }
 
 .employee-name {
@@ -533,13 +535,12 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-
 
 
 .footer-cont-logo{
     align-items: center;
+    margin-bottom: 72px;
 }
 
 
@@ -551,9 +552,9 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-left: 86px;
     margin-bottom: 17.5px;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 
 .footer-logo-studio {
@@ -573,10 +574,8 @@ img {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-right: auto;
-    width: 100%;
     align-items: center;
-
+    margin-bottom: 72px;
 }
 
 .social-media-text{
@@ -587,8 +586,7 @@ img {
     letter-spacing: 0.02em;
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
-    margin-top: 72px;
+    padding-bottom: 16px;
 }
 
 .social-medias{
@@ -628,7 +626,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .footer-form{
@@ -1035,7 +1033,7 @@ img {
         color: #404BBF;
     }
 
-/**-----EFFECTIVE SOLUTIONS----**/
+/**-----EFFECTIVE SOLUTIONS TABLET----**/
 
     .main-part{
         padding: 112px 120px;
@@ -1067,32 +1065,39 @@ img {
         margin-top: 36px;
     }
 
-/**---------WHY CHOOSE US------------*/
+/**---------WHY CHOOSE US TABLET------------*/
     .pros-title {
         text-align: left;
     }
     .pros-list {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
+        gap: 72px 24px;
     }
     .pros-item {
-        flex-basis: calc((100% - 10px) / 2);
+        flex-basis: 356px;
     }
 
-/**-----------OUR TEAM---------------*/
+    .pros-item:not(:last-child){
+        margin-bottom: 0;
+    }
+
+
+
+/**-----------OUR TEAM TABLET---------------*/
 
     .workers-list{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 64px;
     }
 
     .workers-list-item{
         flex-basis: calc((100% - 24px) / 2);
-        margin-bottom: 40px; /*because the space between the cards in our layout is 64 px, so 64-24=40 */
+    
     }
 
     .team-container{
@@ -1100,7 +1105,7 @@ img {
         padding-right: 108px;
     }
 
-/**-----------PORTFOLIO-------------*/
+/**-----------PORTFOLIO TABLET-------------*/
 
     .portfolio-list{
         display: flex;
@@ -1116,25 +1121,25 @@ img {
         flex-basis: calc((100% - 24px) / 2);
     }
 
-/**-----------FOOTER--------------*/
+/**-----------FOOTER TABLET--------------*/
 
     .footer-container{
-        max-width: 768px;
+        
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-between;
+        align-items: baseline;
         column-gap: 24px;
+        max-width: 530px;
     }
 
     .footer-cont-logo{
-        margin-left: 92px;
         margin-bottom: 72px;
     }
 
     .footer-logo {
         margin-left: 0;
+        text-align: left;
 
     }
 
@@ -1143,10 +1148,6 @@ img {
         
     }
 
-    .container-social{
-        width: 208px;
-        
-    }
 
     .social-media-text{
         margin-top: 0;
@@ -1154,7 +1155,7 @@ img {
     }
 
     .footer-subscribe{
-        margin-left: 92px;
+        margin-left: 0;
 
     }
 
@@ -1167,7 +1168,7 @@ img {
         width: 264px;
     }
 
-/**---------MODAL WINDOW----------*/
+/**---------MODAL WINDOW TABLET----------*/
 
     .modal{
         width: 408px;
@@ -1217,7 +1218,7 @@ img {
         line-height: 1.5;
     }
 
-/**-----EFFECTIVE SOLUTIONS----**/
+/**-----EFFECTIVE SOLUTIONS DESKTOP----**/
     .main-part{
         padding: 188px 0;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-opt.jpg);
@@ -1236,7 +1237,7 @@ img {
         margin-top: 48px;
     }
 
-/**---------WHY CHOOSE US------------*/
+/**---------WHY CHOOSE US DESKTOP------------*/
     .pros{
         padding-top: 120px;
         padding-bottom: 120px;
@@ -1272,7 +1273,7 @@ img {
         display: flex;
     }
 
-/**-----------OUR TEAM---------------*/
+/**-----------OUR TEAM DESKTOP---------------*/
 
     .team-part{
         padding-top: 120px;
@@ -1291,7 +1292,7 @@ img {
         margin-bottom: 0;
     }
 
-/**-----------PORTFOLIO-------------*/
+/**-----------PORTFOLIO DESKTOP-------------*/
 
     .portfolio-part{
         padding-top: 120px;
@@ -1311,7 +1312,7 @@ img {
         flex-basis: calc((100% - 24px * 2) / 3);
     }
 
-/**-----------FOOTER--------------*/
+/**-----------FOOTER DESKTOP--------------*/
 
     .footer{
         padding: 100px 0;
@@ -1332,8 +1333,8 @@ img {
     }
 
     .container-social{
-        width: 208px;
         align-items: flex-start;
+        margin-bottom: 0;
     }
 
     .social-media-text{
@@ -1358,11 +1359,12 @@ img {
         width: 264px;
     }
 
-/**---------MODAL WINDOW----------*/
+/**---------MODAL WINDOW DESKTOP----------*/
 
     .modal-input{
         padding-left: 38px;
     }
 
+    
 }    
 
